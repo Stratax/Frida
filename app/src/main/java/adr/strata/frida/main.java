@@ -1,5 +1,6 @@
 package adr.strata.frida;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,13 +30,15 @@ public class main extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v){
         switch (v.getId()){
             case R.id.Login_Register:
-                k.setText("You've clicked");
+                Intent iRegister = new Intent(this,Register.class);
+                startActivity(iRegister);
                 break;
             case R.id.Login_Recovery:
                 k.setText("Forgot your password?");
                 break;
             case R.id.Login_Button:
-                a.setBackgroundColor(Color.RED);
+                Intent iLobby = new Intent(this,Lobby.class);
+                startActivity(iLobby);
                 break;
         }
     }

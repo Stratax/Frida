@@ -19,6 +19,12 @@
         <activity android:name=".main">
 
         </activity>
+        <activity android:name=".Register">
+
+        </activity>
+        <activity android:name=".Lobby">
+
+        </activity>
     </application>
 
 </manifest>
