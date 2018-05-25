@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Frida</string>
+    <string name="User">Usuario</string>
+    <string name="Password">Contraseña</string>
+    <string name="Login">Acceder</string>
+    <string name="Signup">Registro</string>
+    <string name="F_ur_pass">¿Olvidaste tu contraseña?</string>
+    <string name="Name">Nombre</string>
+    <string name="ApellidoP">Apellido Paterno</string>
+    <string name="ApellidoM">Apellido Materno</string>
+    <string name="Email">Correo Electrónico</string>
+    <string name="Phone">Teléfono</string>
+    <string name="Age">Edad</string>
+    <string name="Next">Siguiente</string>
+    <string name="title_activity_register2">Register2</string>
+    <string name="Calle">Calle</string>
+    <string name="Colonia">Colonia</string>
+    <string name="Municipio">Municipio</string>
+    <string name="CP">C.P.</string>
+    <string name="Estado">Estado</string>
+
 </resources>

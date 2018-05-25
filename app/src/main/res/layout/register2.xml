@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -42,11 +43,11 @@
         app:layout_constraintVertical_bias="0.137" />
 
     <EditText
-        android:id="@+id/Register_Name"
+        android:id="@+id/Register_Calle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
-        android:hint="@string/Name"
+        android:hint="@string/Calle"
         android:textColor="#ddd"
         android:inputType="textPersonName"
         android:background="#666"
@@ -59,11 +60,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.30" />
     <EditText
-        android:id="@+id/Register_ApellidoP"
+        android:id="@+id/Register_Colonia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
-        android:hint="@string/ApellidoP"
+        android:hint="@string/Colonia"
         android:textColor="#ddd"
         android:inputType="textPersonName"
         android:background="#666"
@@ -76,11 +77,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.40" />
     <EditText
-        android:id="@+id/Register_ApellidoM"
+        android:id="@+id/Register_Municipio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
-        android:hint="@string/ApellidoM"
+        android:hint="@string/Municipio"
         android:textColor="#ddd"
         android:inputType="textPersonName"
         android:background="#666"
@@ -93,11 +94,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.50" />
     <EditText
-        android:id="@+id/Register_Email"
+        android:id="@+id/Register_CP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
-        android:hint="@string/Email"
+        android:hint="@string/CP"
         android:textColor="#ddd"
         android:inputType="textEmailAddress"
         android:background="#666"
@@ -110,11 +111,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.60" />
     <EditText
-        android:id="@+id/Register_Phone"
+        android:id="@+id/Register_Estado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
-        android:hint="@string/Phone"
+        android:hint="@string/Estado"
         android:textColor="#ddd"
         android:inputType="phone"
         android:background="#666"
@@ -126,23 +127,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.70" />
-    <EditText
-        android:id="@+id/Register_Age"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:hint="@string/Age"
-        android:textColor="#ddd"
-        android:inputType="number"
-        android:background="#666"
-        android:padding="8dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.80" />
 
     <Button
         android:id="@+id/Register_Next1"
