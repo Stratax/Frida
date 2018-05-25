@@ -33,6 +33,12 @@
             >
 
         </activity>
+        <activity
+            android:name=".Register3"
+            android:screenOrientation="portrait"
+            >
+
+        </activity>
     </application>
 
 </manifest>

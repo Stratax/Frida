@@ -12,7 +12,7 @@ public class Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstances){
         super.onCreate(savedInstances);
         setContentView(R.layout.register);
-        next = (Button)this.findViewById(R.id.Register_Next1);
+        next = (Button)this.findViewById(R.id.Register_Next);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

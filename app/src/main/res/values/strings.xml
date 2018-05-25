@@ -1,6 +1,7 @@
 <resources>
+
     <string name="app_name">Frida</string>
-    <string name="User">Usuario</string>
+    <string name="User">Correo Electrónico</string>
     <string name="Password">Contraseña</string>
     <string name="Login">Acceder</string>
     <string name="Signup">Registro</string>

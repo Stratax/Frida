@@ -42,6 +42,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.137" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dirección: "
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.272" />
+
     <EditText
         android:id="@+id/Register_Calle"
         android:layout_width="match_parent"
@@ -100,7 +112,7 @@
         android:layout_margin="40dp"
         android:hint="@string/CP"
         android:textColor="#ddd"
-        android:inputType="textEmailAddress"
+        android:inputType="number"
         android:background="#666"
         android:padding="8dp"
 
@@ -117,7 +129,7 @@
         android:layout_margin="40dp"
         android:hint="@string/Estado"
         android:textColor="#ddd"
-        android:inputType="phone"
+        android:inputType="textPersonName"
         android:background="#666"
         android:padding="8dp"
 
@@ -129,7 +141,7 @@
         app:layout_constraintVertical_bias="0.70" />
 
     <Button
-        android:id="@+id/Register_Next1"
+        android:id="@+id/Register_Next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"

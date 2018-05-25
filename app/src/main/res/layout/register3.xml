@@ -44,17 +44,17 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Datos Personales: "
+        android:text="Contacto 1: "
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.272" />
 
     <EditText
-        android:id="@+id/Register_Name"
+        android:id="@+id/Register_C1Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
@@ -70,14 +70,16 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.30" />
+
+
     <EditText
-        android:id="@+id/Register_ApellidoP"
+        android:id="@+id/Register_C1Phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
-        android:hint="@string/ApellidoP"
+        android:hint="@string/Phone"
         android:textColor="#ddd"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         android:background="#666"
         android:padding="8dp"
 
@@ -87,12 +89,24 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.40" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contacto 2: "
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
     <EditText
-        android:id="@+id/Register_ApellidoM"
+        android:id="@+id/Register_C2Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
-        android:hint="@string/ApellidoM"
+        android:hint="@string/Name"
         android:textColor="#ddd"
         android:inputType="textPersonName"
         android:background="#666"
@@ -103,26 +117,11 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.50" />
-    <EditText
-        android:id="@+id/Register_Email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:hint="@string/Email"
-        android:textColor="#ddd"
-        android:inputType="textEmailAddress"
-        android:background="#666"
-        android:padding="8dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.60" />
+
+
     <EditText
-        android:id="@+id/Register_Phone"
+        android:id="@+id/Register_C2Phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
@@ -138,23 +137,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.70" />
-    <EditText
-        android:id="@+id/Register_Age"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:hint="@string/Age"
-        android:textColor="#ddd"
-        android:inputType="number"
-        android:background="#666"
-        android:padding="8dp"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.80" />
+
 
     <Button
         android:id="@+id/Register_Next"
