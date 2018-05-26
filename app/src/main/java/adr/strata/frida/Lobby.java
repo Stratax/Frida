@@ -8,6 +8,6 @@ public class Lobby extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstances){
         super.onCreate(savedInstances);
-        setContentView(R.layout.loby);
+        setContentView(R.layout.lobby);
     }
 }

@@ -79,7 +79,7 @@
         android:layout_margin="40dp"
         android:hint="@string/Phone"
         android:textColor="#ddd"
-        android:inputType="phone"
+        android:inputType="textPersonName"
         android:background="#666"
         android:padding="8dp"
 
@@ -89,6 +89,23 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.40" />
+    <EditText
+        android:id="@+id/Register_C1Relation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:hint="Parentesco"
+        android:textColor="#ddd"
+        android:inputType="phone"
+        android:background="#666"
+        android:padding="8dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.50" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -99,14 +116,50 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.572" />
 
     <EditText
         android:id="@+id/Register_C2Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
+        android:background="#666"
         android:hint="@string/Name"
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        android:textColor="#ddd"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.676" />
+
+
+    <EditText
+        android:id="@+id/Register_C2Phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="#666"
+        android:hint="@string/Phone"
+        android:inputType="phone"
+        android:padding="8dp"
+        android:textColor="#ddd"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.776" />
+
+
+    <EditText
+        android:id="@+id/Register_C2Relation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:hint="Parentesco"
         android:textColor="#ddd"
         android:inputType="textPersonName"
         android:background="#666"
@@ -117,35 +170,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.60" />
-
-
-    <EditText
-        android:id="@+id/Register_C2Phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:hint="@string/Phone"
-        android:textColor="#ddd"
-        android:inputType="phone"
-        android:background="#666"
-        android:padding="8dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.70" />
-
-
-
+        app:layout_constraintVertical_bias="0.876" />
     <Button
         android:id="@+id/Register_Next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
-        android:hint="@string/Next"
+        android:hint="@string/Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"

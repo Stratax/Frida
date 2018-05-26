@@ -19,5 +19,6 @@
     <string name="Municipio">Municipio</string>
     <string name="CP">C.P.</string>
     <string name="Estado">Estado</string>
+    <string name="Register">Registro</string>
 
 </resources>
