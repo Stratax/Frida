@@ -1,21 +1,23 @@
 package adr.strata.frida;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Lobby extends AppCompatActivity implements View.OnClickListener{
-    private Button a, b;
+    private ImageButton a, b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loby);
-        a = (Button)this.findViewById(R.id.btn_estado);
-        b = (Button)this.findViewById(R.id.btn_danio);
+        a = (ImageButton)this.findViewById(R.id.btn_estado);
+        b = (ImageButton)this.findViewById(R.id.btn_danio);
 
         a.setOnClickListener(this);
         b.setOnClickListener(this);

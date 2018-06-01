@@ -34,6 +34,12 @@
         <activity
             android:name=".Register3"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".Danio"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Estado"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

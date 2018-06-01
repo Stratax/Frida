@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-android:layout_height="fill_parent">
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -38,7 +39,7 @@ android:layout_height="fill_parent">
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-            <!--app:layout_constraintEnd_toEndOf="parent"
+        <!--app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"--> />
@@ -53,17 +54,6 @@ android:layout_height="fill_parent">
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/textView3"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="0dp"
-            android:layout_height="51dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="140dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Bienvenido a la herramienta de Reporte de Daño" />
 
         <TextView
             android:id="@+id/textView"
@@ -240,5 +230,16 @@ android:layout_height="fill_parent">
             app:layout_constraintTop_toTopOf="@+id/btn_grieta4"
             tools:text="Grieta en forma de Equis o de U" />
 
-    </android.support.constraint.ConstraintLayout>
-</ScrollView>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="520dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Bienvenido a la herramienta de Reporte de Daño" />
+</android.support.constraint.ConstraintLayout>
