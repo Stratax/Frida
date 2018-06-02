@@ -8,14 +8,29 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import adr.strata.frida.actores.Usuario;
 
 public class Lobby extends AppCompatActivity implements View.OnClickListener{
     private ImageButton a, b;
+
+    private Usuario user; //Clase del usuario
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loby);
+
+        //----------------------------------------------------------------------------------------------------------------------------------------//
+        //////////////////////////// Aquí paso los datos de usuario que inicia sesión. Checar la clase actores.Usuario//////////////////////////////
+            Bundle d = getIntent().getExtras();
+            user = (Usuario) d.get("Usuario");
+            Toast.makeText(this,user.getNombre() + user.getApellido_paterno() + user.getApellido_materno(), Toast.LENGTH_SHORT).show();
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //_______________________________________________________________________________________________________________________________________//
+
         a = (ImageButton)this.findViewById(R.id.btn_estado);
         b = (ImageButton)this.findViewById(R.id.btn_danio);
 

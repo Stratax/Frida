@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="FRIDA |"
-        android:textSize="35dp"
+        android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Signup"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.841"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Datos Personales: "
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -53,12 +53,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.272" />
 
+
     <EditText
         android:id="@+id/Register_Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
         android:hint="@string/Name"
+        android:textColorHint="#bbb"
         android:textColor="#ddd"
         android:inputType="textPersonName"
         android:background="#666"
@@ -76,6 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
         android:hint="@string/ApellidoP"
+        android:textColorHint="#bbb"
         android:textColor="#ddd"
         android:inputType="textPersonName"
         android:background="#666"
@@ -93,6 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
         android:hint="@string/ApellidoM"
+        android:textColorHint="#bbb"
         android:textColor="#ddd"
         android:inputType="textPersonName"
         android:background="#666"
@@ -104,29 +108,14 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.50" />
-    <EditText
-        android:id="@+id/Register_Email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:hint="@string/Email"
-        android:textColor="#ddd"
-        android:inputType="textEmailAddress"
-        android:background="#666"
-        android:padding="8dp"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.60" />
     <EditText
         android:id="@+id/Register_Phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
         android:hint="@string/Phone"
+        android:textColorHint="#bbb"
         android:textColor="#ddd"
         android:inputType="phone"
         android:background="#666"
@@ -137,15 +126,34 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.70" />
+        app:layout_constraintVertical_bias="0.60" />
     <EditText
         android:id="@+id/Register_Age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
         android:hint="@string/Age"
+        android:textColorHint="#bbb"
         android:textColor="#ddd"
         android:inputType="number"
+        android:background="#666"
+        android:padding="8dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.70" />
+    <EditText
+        android:id="@+id/Register_BloodType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:hint="@string/BlodType"
+        android:textColorHint="#bbb"
+        android:textColor="#ddd"
+        android:inputType="textPersonName"
         android:background="#666"
         android:padding="8dp"
 
@@ -168,5 +176,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1" />
+
+
 
 </android.support.constraint.ConstraintLayout>

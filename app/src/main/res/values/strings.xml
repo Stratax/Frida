@@ -20,6 +20,7 @@
     <string name="CP">C.P.</string>
     <string name="Estado">Estado</string>
     <string name="Register">Registro</string>
+    <string name="BlodType">Tipo de Sangre</string>
     <string name="Place">Domicilio en donde se econtró el daño</string>
 
 </resources>

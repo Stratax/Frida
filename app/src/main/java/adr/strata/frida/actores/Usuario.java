@@ -17,13 +17,48 @@ public class Usuario implements Serializable {
     private String telefono;
     private int edad;
     private String calle;
+    private String casa_no;
     private String colonia;
     private String estado;
     private String delegacion;
     private String tpo_sangre;
+    private String cp;
+
+    public Usuario() {
+        nombre = "empty";
+        apellido_paterno = "empty";
+        apellido_materno = "empty";
+        email = "empty";
+        contrasenia = "empty";
+        telefono = "empty";
+        edad = 0;
+        calle = "empty";
+        casa_no = "empty";
+        colonia = "empty";
+        estado = "empty";
+        delegacion = "empty";
+        tpo_sangre = "empty";
+        cp = "empty";
+    }
+
+    public String getCp() {
+        return cp;
+    }
+
+    public void setCp(String cp) {
+        this.cp = cp;
+    }
 
     public String getNombre() {
         return nombre;
+    }
+
+    public String getCasa_no() {
+        return casa_no;
+    }
+
+    public void setCasa_no(String casa_no) {
+        this.casa_no = casa_no;
     }
 
     public void setNombre(String nombre) {
