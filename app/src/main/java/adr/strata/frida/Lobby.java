@@ -31,8 +31,8 @@ public class Lobby extends AppCompatActivity implements View.OnClickListener{
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //_______________________________________________________________________________________________________________________________________//
 
-        a = (ImageButton)this.findViewById(R.id.btn_estado);
-        b = (ImageButton)this.findViewById(R.id.btn_danio);
+        a = this.findViewById(R.id.btn_estado);
+        b = this.findViewById(R.id.btn_danio);
 
         a.setOnClickListener(this);
         b.setOnClickListener(this);
@@ -41,11 +41,11 @@ public class Lobby extends AppCompatActivity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btn_estado:
+            case R.id.btn_danio:
                 Intent danio = new Intent(this,Danio.class);
                 startActivity(danio);
                 break;
-            case R.id.btn_danio:
+            case R.id.btn_estado:
                 Intent estado = new Intent(this,Estado.class);
                 startActivity(estado);
                 break;
