@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,8 @@ public class main extends AppCompatActivity implements View.OnClickListener{
     private EditText password,email;
     private Usuario readUsuario;
     private ArrayList<Usuario> lista;
+    private ImageView frida;
+    private int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +47,9 @@ public class main extends AppCompatActivity implements View.OnClickListener{
 
         email = (EditText)this.findViewById(R.id.Login_User);
         password = (EditText)this.findViewById(R.id.Login_Password);
+        frida = (ImageView)this.findViewById(R.id.imagenFrida);
+        frida.setOnClickListener(this);
+
         try{
             FileInputStream fis = openFileInput("Registro");
             ObjectInputStream ois = new ObjectInputStream(fis);
@@ -74,6 +80,16 @@ public class main extends AppCompatActivity implements View.OnClickListener{
                     startActivity(iLobby);
                 }else{
                     Toast.makeText(this,"Correo o contraseña no validos",Toast.LENGTH_LONG).show();
+                }
+                break;
+            case R.id.imagenFrida:
+                counter++;
+                if(counter == 5){
+                    Toast.makeText(this,"Que onda George", Toast.LENGTH_SHORT).show();
+                }
+                if(counter == 10){
+                    Toast.makeText(this,"Gibran alias crotolamo", Toast.LENGTH_SHORT).show();
+                    counter = 0;
                 }
                 break;
         }

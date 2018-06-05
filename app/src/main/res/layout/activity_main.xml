@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-
+        android:id="@+id/imagenFrida"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.150"
         app:layout_constraintLeft_toLeftOf="parent"

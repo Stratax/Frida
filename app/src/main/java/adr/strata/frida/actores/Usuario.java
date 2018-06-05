@@ -2,19 +2,14 @@ package adr.strata.frida.actores;
 
 
 
-import java.io.FileOutputStream;
-import java.io.OutputStreamWriter;
 import java.io.Serializable;
 import java.util.List;
 
-public class Usuario implements Serializable {
+public class Usuario extends Persona{
 
-    private String nombre;
-    private String apellido_paterno;
-    private String apellido_materno;
+
     private String email;
     private String contrasenia;
-    private String telefono;
     private int edad;
     private String calle;
     private String casa_no;
@@ -23,14 +18,11 @@ public class Usuario implements Serializable {
     private String delegacion;
     private String tpo_sangre;
     private String cp;
+    private Contacto contactos[];
 
     public Usuario() {
-        nombre = "empty";
-        apellido_paterno = "empty";
-        apellido_materno = "empty";
         email = "empty";
         contrasenia = "empty";
-        telefono = "empty";
         edad = 0;
         calle = "empty";
         casa_no = "empty";
@@ -39,6 +31,14 @@ public class Usuario implements Serializable {
         delegacion = "empty";
         tpo_sangre = "empty";
         cp = "empty";
+        contactos = new Contacto[3];
+    }
+
+    public void agregarContacto(Contacto c, int pos){
+        contactos[pos] = c;
+    }
+    public Contacto getContacto(int pos){
+        return contactos[pos];
     }
 
     public String getCp() {
@@ -49,9 +49,6 @@ public class Usuario implements Serializable {
         this.cp = cp;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
 
     public String getCasa_no() {
         return casa_no;
@@ -59,26 +56,6 @@ public class Usuario implements Serializable {
 
     public void setCasa_no(String casa_no) {
         this.casa_no = casa_no;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido_paterno() {
-        return apellido_paterno;
-    }
-
-    public void setApellido_paterno(String apellido_paterno) {
-        this.apellido_paterno = apellido_paterno;
-    }
-
-    public String getApellido_materno() {
-        return apellido_materno;
-    }
-
-    public void setApellido_materno(String apellido_materno) {
-        this.apellido_materno = apellido_materno;
     }
 
     public String getEmail() {
@@ -95,14 +72,6 @@ public class Usuario implements Serializable {
 
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
     }
 
     public int getEdad() {
