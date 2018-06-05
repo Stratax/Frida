@@ -14,7 +14,7 @@ import android.widget.Toast;
 import adr.strata.frida.actores.Usuario;
 
 public class Lobby extends AppCompatActivity implements View.OnClickListener{
-    private ImageButton a, b, c;
+    private ImageView a, b, c;
     private ImageView g ,e ,f;
     private Usuario user; //Clase del usuario
     private int counter = 0;
@@ -82,6 +82,6 @@ public class Lobby extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public void onBackPressed() {
-
+        finish();
     }
 }

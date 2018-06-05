@@ -78,6 +78,7 @@ public class main extends AppCompatActivity implements View.OnClickListener{
                     Intent iLobby = new Intent(this,Lobby.class);
                     iLobby.putExtra("Usuario",readUsuario);
                     startActivity(iLobby);
+                    finish();
                 }else{
                     Toast.makeText(this,"Correo o contraseña no validos",Toast.LENGTH_LONG).show();
                 }
