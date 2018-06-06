@@ -57,32 +57,38 @@ public class Register3 extends AppCompatActivity implements View.OnClickListener
     }
 
     @Override
-    public  void onClick(View v){
+    public  void onClick(View v) {
 
         //TODO Obligar a una contraseña segura
         //TODO Validar datos
+        if (correo.getText().toString().isEmpty()
+                || password1.getText().toString().isEmpty()
+                || password2.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Campos vacios", Toast.LENGTH_LONG).show();
+        } else {
 
-        if(password1.getText().toString().equals(password2.getText().toString())){
-            usuarioAuxiliar.setContrasenia(password1.getText().toString());
-            usuarioAuxiliar.setEmail(correo.getText().toString());
-            lista.add(usuarioAuxiliar);
-            try{
-                FileOutputStream fos = openFileOutput("Registro", Context.MODE_PRIVATE);
-                ObjectOutputStream oos = new ObjectOutputStream(fos);
-                oos.writeObject(lista);
-                oos.close();
-            }catch (Exception e){
-                Log.println(Log.DEBUG,"--------------->","Error en FOS");
-                e.printStackTrace();
+            if (password1.getText().toString().equals(password2.getText().toString())) {
+                usuarioAuxiliar.setContrasenia(password1.getText().toString());
+                usuarioAuxiliar.setEmail(correo.getText().toString());
+                lista.add(usuarioAuxiliar);
+                try {
+                    FileOutputStream fos = openFileOutput("Registro", Context.MODE_PRIVATE);
+                    ObjectOutputStream oos = new ObjectOutputStream(fos);
+                    oos.writeObject(lista);
+                    oos.close();
+                } catch (Exception e) {
+                    Log.println(Log.DEBUG, "--------------->", "Error en FOS");
+                    e.printStackTrace();
+                }
+                Toast.makeText(this, "Registro completo", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(this, main.class);
+                startActivity(i);
+                finish();
+            } else {
+                Toast.makeText(this, "Contraseña no coincide", Toast.LENGTH_SHORT).show();
             }
-            Toast.makeText(this,"Registro completo", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(this,main.class);
-            startActivity(i);
-            finish();
-        }else{
-            Toast.makeText(this,"Contraseña no coincide", Toast.LENGTH_SHORT).show();
-        }
 
+        }
     }
 
 }

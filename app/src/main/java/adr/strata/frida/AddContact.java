@@ -66,44 +66,52 @@ public class AddContact extends AppCompatActivity implements View.OnClickListene
     }
 
     @Override
-    public void onClick(View v){
-        if(u1.getContacts().size() == 3){
-            Toast.makeText(this, "Registro de contactos llenos", Toast.LENGTH_SHORT).show();
-            Intent intentLobby = new Intent(this,Lobby.class);
-            intentLobby.putExtra("Usuario",u1);
-            startActivity(intentLobby);
-            finish();
-        }else{
-            c1.setNombre(nombre.getText().toString());
-            c1.setApellido_paterno(apellidoP.getText().toString());
-            c1.setApellido_materno(apellidoM.getText().toString());
-            c1.setTelefono(telefono.getText().toString());
-            c1.setParentesco(parentesco.getText().toString());
+    public void onClick(View v) {
+        if (nombre.getText().toString().isEmpty()
+                || apellidoP.getText().toString().isEmpty()
+                || apellidoM.getText().toString().isEmpty()
+                || telefono.getText().toString().isEmpty()
+                || parentesco.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Campos vacios", Toast.LENGTH_LONG).show();
+        } else {
+            if (u1.getContacts().size() == 3) {
+                Toast.makeText(this, "Registro de contactos llenos", Toast.LENGTH_SHORT).show();
+                Intent intentLobby = new Intent(this, Lobby.class);
+                intentLobby.putExtra("Usuario", u1);
+                startActivity(intentLobby);
+                finish();
+            } else {
+                c1.setNombre(nombre.getText().toString());
+                c1.setApellido_paterno(apellidoP.getText().toString());
+                c1.setApellido_materno(apellidoM.getText().toString());
+                c1.setTelefono(telefono.getText().toString());
+                c1.setParentesco(parentesco.getText().toString());
 
-            u1.agregarContacto(c1);
-            for(int i = 0; i<lista.size();i++){
-                if(u1.getNombre().equals(lista.get(i).getNombre()) && u1.getContrasenia().equals(lista.get(i).getContrasenia())){
-                    lista.remove(i);
-                    lista.add(i,u1);
+                u1.agregarContacto(c1);
+                for (int i = 0; i < lista.size(); i++) {
+                    if (u1.getNombre().equals(lista.get(i).getNombre()) && u1.getContrasenia().equals(lista.get(i).getContrasenia())) {
+                        lista.remove(i);
+                        lista.add(i, u1);
+                    }
                 }
-            }
-            try{
-                FileOutputStream fos = openFileOutput("Registro", Context.MODE_PRIVATE);
-                ObjectOutputStream oos = new ObjectOutputStream(fos);
-                oos.writeObject(lista);
-                oos.close();
-            }catch (Exception e){
-                Log.println(Log.DEBUG,"--------------->","Error en FOS");
-                e.printStackTrace();
-            }
+                try {
+                    FileOutputStream fos = openFileOutput("Registro", Context.MODE_PRIVATE);
+                    ObjectOutputStream oos = new ObjectOutputStream(fos);
+                    oos.writeObject(lista);
+                    oos.close();
+                } catch (Exception e) {
+                    Log.println(Log.DEBUG, "--------------->", "Error en FOS");
+                    e.printStackTrace();
+                }
 
-            Toast.makeText(this,"Contacto agregado",Toast.LENGTH_SHORT).show();
-            Intent intentLobby = new Intent(this,Lobby.class);
-            intentLobby.putExtra("Usuario",u1);
-            startActivity(intentLobby);
-            finish();
+                Toast.makeText(this, "Contacto agregado", Toast.LENGTH_SHORT).show();
+                Intent intentLobby = new Intent(this, Lobby.class);
+                intentLobby.putExtra("Usuario", u1);
+                startActivity(intentLobby);
+                finish();
+
+            }
 
         }
-
     }
 }

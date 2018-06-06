@@ -14,7 +14,7 @@ import android.widget.Toast;
 import adr.strata.frida.actores.Usuario;
 
 public class Lobby extends AppCompatActivity implements View.OnClickListener{
-    private ImageView a, b, c,g ,e ,f,h,j;
+    private ImageView a, b, c,g ,e ,f,h,j,k;
     private Usuario user; //Clase del usuario
     private int counter = 0;
 
@@ -29,6 +29,7 @@ public class Lobby extends AppCompatActivity implements View.OnClickListener{
             Bundle d = getIntent().getExtras();
             user = (Usuario) d.get("Usuario");
             Toast.makeText(this,user.getNombre() + user.getApellido_paterno() + user.getApellido_materno(), Toast.LENGTH_SHORT).show();
+
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //_______________________________________________________________________________________________________________________________________//
 
@@ -40,11 +41,13 @@ public class Lobby extends AppCompatActivity implements View.OnClickListener{
         f = this.findViewById(R.id.SismoMedio);
         h = this.findViewById(R.id.SinContacto);
         j = this.findViewById(R.id.btn_addContact);
+        k = this.findViewById(R.id.btn_infoContacto);
 
         a.setOnClickListener(this);
         b.setOnClickListener(this);
         c.setOnClickListener(this);
         j.setOnClickListener(this);
+        k.setOnClickListener(this);
 
         if(user.getContacts().size()!=0){
             h.setVisibility(View.INVISIBLE);
@@ -88,6 +91,13 @@ public class Lobby extends AppCompatActivity implements View.OnClickListener{
                 intentAddContact.putExtra("Usuario",user);
                 startActivity(intentAddContact);
                 finish();
+                break;
+            case  R.id.btn_infoContacto:
+                Intent intentInfoUser = new Intent(this,InfoUser.class);
+                intentInfoUser.putExtra("Usuario",user);
+                startActivity(intentInfoUser);
+                finish();
+                break;
         }
     }
 

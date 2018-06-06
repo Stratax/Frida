@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import adr.strata.frida.actores.Usuario;
 
@@ -41,17 +42,28 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v) {
         //TODO Validar datos
 
-        usuarioAuxiliar.setNombre(nombre.getText().toString());
-        usuarioAuxiliar.setApellido_paterno(apellidoP.getText().toString());
-        usuarioAuxiliar.setApellido_materno(apellidoM.getText().toString());
-        usuarioAuxiliar.setTelefono(telefono.getText().toString());
-        usuarioAuxiliar.setEdad(Integer.parseInt(edad.getText().toString()));
-        usuarioAuxiliar.setTpo_sangre(tpoSangre.getText().toString());
+        if(nombre.getText().toString().isEmpty()
+           ||apellidoP.getText().toString().isEmpty()
+           ||apellidoM.getText().toString().isEmpty()
+           ||telefono.getText().toString().isEmpty()
+           ||edad.getText().toString().isEmpty()
+           ||tpoSangre.getText().toString().isEmpty()){
+            Toast.makeText(this,"Campos vacios", Toast.LENGTH_LONG).show();
+        }else{
+            usuarioAuxiliar.setNombre(nombre.getText().toString());
+            usuarioAuxiliar.setApellido_paterno(apellidoP.getText().toString());
+            usuarioAuxiliar.setApellido_materno(apellidoM.getText().toString());
+            usuarioAuxiliar.setTelefono(telefono.getText().toString());
+            usuarioAuxiliar.setEdad(Integer.parseInt(edad.getText().toString()));
+            usuarioAuxiliar.setTpo_sangre(tpoSangre.getText().toString());
 
-        Intent i = new Intent(Register.this,Register2.class);
-        i.putExtra("data",usuarioAuxiliar);
-        startActivity(i);
-        finish();
+            Intent i = new Intent(Register.this,Register2.class);
+            i.putExtra("data",usuarioAuxiliar);
+            startActivity(i);
+            finish();
+        }
+
+
     }
 
 }

@@ -46,21 +46,28 @@ public class Register2 extends AppCompatActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
 
-        //TODO validar datos
         //TODO Resolver Ambigüedad entre Delagacion o municipio
+        if(calle.getText().toString().isEmpty()
+                ||noCasa.getText().toString().isEmpty()
+                ||colonia.getText().toString().isEmpty()
+                ||municipio.getText().toString().isEmpty()
+                ||cp.getText().toString().isEmpty()
+                ||estado.getText().toString().isEmpty()){
+            Toast.makeText(this,"Campos vacios", Toast.LENGTH_LONG).show();
+        }else {
+            usuarioAuxiliar.setCalle(calle.getText().toString());
+            usuarioAuxiliar.setCasa_no(noCasa.getText().toString());
+            usuarioAuxiliar.setColonia(colonia.getText().toString());
+            usuarioAuxiliar.setDelegacion(municipio.getText().toString());
+            usuarioAuxiliar.setCp(cp.getText().toString());
+            usuarioAuxiliar.setEstado(estado.getText().toString());
 
-        usuarioAuxiliar.setCalle(calle.getText().toString());
-        usuarioAuxiliar.setCasa_no(noCasa.getText().toString());
-        usuarioAuxiliar.setColonia(colonia.getText().toString());
-        usuarioAuxiliar.setDelegacion(municipio.getText().toString());
-        usuarioAuxiliar.setCp(cp.getText().toString());
-        usuarioAuxiliar.setEstado(estado.getText().toString());
 
-
-        Intent i = new Intent(Register2.this,Register3.class);
-        i.putExtra("data",usuarioAuxiliar);
-        startActivity(i);
-        finish();
+            Intent i = new Intent(Register2.this, Register3.class);
+            i.putExtra("data", usuarioAuxiliar);
+            startActivity(i);
+            finish();
+        }
     }
 
 }
