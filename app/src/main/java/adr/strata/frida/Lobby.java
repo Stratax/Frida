@@ -14,8 +14,7 @@ import android.widget.Toast;
 import adr.strata.frida.actores.Usuario;
 
 public class Lobby extends AppCompatActivity implements View.OnClickListener{
-    private ImageView a, b, c;
-    private ImageView g ,e ,f;
+    private ImageView a, b, c,g ,e ,f,h,j;
     private Usuario user; //Clase del usuario
     private int counter = 0;
 
@@ -39,10 +38,17 @@ public class Lobby extends AppCompatActivity implements View.OnClickListener{
         g = this.findViewById(R.id.SinSismo);
         e = this.findViewById(R.id.SismoBajo);
         f = this.findViewById(R.id.SismoMedio);
+        h = this.findViewById(R.id.SinContacto);
+        j = this.findViewById(R.id.btn_addContact);
 
         a.setOnClickListener(this);
         b.setOnClickListener(this);
         c.setOnClickListener(this);
+        j.setOnClickListener(this);
+
+        if(user.getContacts().size()!=0){
+            h.setVisibility(View.INVISIBLE);
+        }
     }
 
     @Override
@@ -77,6 +83,11 @@ public class Lobby extends AppCompatActivity implements View.OnClickListener{
                     f.setVisibility(View.INVISIBLE);
                 }
                 break;
+            case R.id.btn_addContact:
+                Intent intentAddContact = new Intent(this,AddContact.class);
+                intentAddContact.putExtra("Usuario",user);
+                startActivity(intentAddContact);
+                finish();
         }
     }
 

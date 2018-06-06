@@ -3,6 +3,7 @@ package adr.strata.frida.actores;
 
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Usuario extends Persona{
@@ -18,7 +19,7 @@ public class Usuario extends Persona{
     private String delegacion;
     private String tpo_sangre;
     private String cp;
-    private Contacto contactos[];
+    private ArrayList<Contacto> contactos;
 
     public Usuario() {
         email = "empty";
@@ -31,14 +32,17 @@ public class Usuario extends Persona{
         delegacion = "empty";
         tpo_sangre = "empty";
         cp = "empty";
-        contactos = new Contacto[3];
+        contactos = new ArrayList<>();
     }
 
-    public void agregarContacto(Contacto c, int pos){
-        contactos[pos] = c;
+    public void agregarContacto(Contacto c){
+        contactos.add(c);
     }
     public Contacto getContacto(int pos){
-        return contactos[pos];
+        return contactos.get(pos);
+    }
+    public ArrayList<Contacto> getContacts(){
+        return contactos;
     }
 
     public String getCp() {

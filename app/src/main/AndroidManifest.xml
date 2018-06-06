@@ -45,6 +45,9 @@
         <activity
             android:name=".Estado"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddContact"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
