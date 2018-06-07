@@ -96,7 +96,7 @@ public class Lobby extends AppCompatActivity implements View.OnClickListener{
                 Intent intentInfoUser = new Intent(this,InfoUser.class);
                 intentInfoUser.putExtra("Usuario",user);
                 startActivity(intentInfoUser);
-                finish();
+
                 break;
         }
     }

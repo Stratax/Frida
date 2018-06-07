@@ -23,5 +23,6 @@
     <string name="BlodType">Tipo de Sangre*</string>
     <string name="Place">Domicilio en donde se econtró el daño</string>
     <string name="addContact">Agregar \ncontacto</string>
+    <string name="infoUser">Información \ndel usuario</string>
 
 </resources>
